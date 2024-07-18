@@ -158,10 +158,12 @@ local function startTargeting()
                 DisableControlAction(0, 1, true)
                 DisableControlAction(0, 2, true)
 
-                if not hasTarget or options and IsDisabledControlJustPressed(0, 25) then
+                --if not hasTarget or options and IsDisabledControlJustPressed(0, 25) then
+                if not hasTarget or options and IsDisabledControlJustPressed(0, 0) then
                     state.setNuiFocus(false, false)
                 end
-            elseif hasTarget and IsDisabledControlJustPressed(0, mouseButton) then
+            --elseif hasTarget and IsDisabledControlJustPressed(0, mouseButton) then
+            elseif hasTarget then
                 state.setNuiFocus(true, true)
             end
 
